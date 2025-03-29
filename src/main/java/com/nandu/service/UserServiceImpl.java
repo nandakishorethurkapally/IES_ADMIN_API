@@ -99,7 +99,7 @@ public class UserServiceImpl implements UserService {
 			
 			//"RECOVER PASSWORD"
 			String subject = AppConstants.RECOVER_SUB;
-			String body = readEmailBody("FORGOT_EMAIL_BODY.txt" ,userEntity);
+			String body = readEmailBody(AppConstants.PWD_BODY_FILE ,userEntity);
 			return emailUtils.sendEmail(subject, body, email);	
 		}
 	}
