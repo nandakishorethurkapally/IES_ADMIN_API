@@ -2,6 +2,7 @@ package com.nandu.service;
 
 import com.nandu.binding.DashBoardCards;
 import com.nandu.binding.LoginForm;
+import com.nandu.binding.UserAccForm;
 
 // this is for (login /forgot / dashboard/profile operatiosn) 
 public interface UserService {
@@ -20,9 +21,11 @@ public interface UserService {
 	 * if that person kdoesnot have account with that emial u have to dispaly that msgyour emia, id does not have account 
 	 * with that emial
 	 */
-	public String recovaryPassword(String email);
-	
+	public boolean recovaryPassword(String email);
 	
 	// lif login sucess then we should get dashboard data 
 	public DashBoardCards fetchDasgboardInfo();
+	
+	// get user accoount based on email
+	public UserAccForm getUserByEmail(String emial);
 }
